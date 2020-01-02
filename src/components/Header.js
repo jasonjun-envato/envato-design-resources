@@ -17,6 +17,10 @@ const HeaderInner = styled.div`
   justify-content: space-between;
 
   nav {
+    @media screen and (max-width: 500px) {
+      display: none;
+    }
+
     ul {
       display: flex;
 
