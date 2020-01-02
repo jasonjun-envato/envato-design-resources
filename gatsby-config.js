@@ -1,6 +1,7 @@
 const path = require("path")
 
 module.exports = {
+  pathPrefix: `/envato-design-resources`,
   siteMetadata: {
     title: `Envato Design Resources`,
     description: `Logos, Colors, and UI libraries to help you design for Envato.`,
