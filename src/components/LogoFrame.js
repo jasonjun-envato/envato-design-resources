@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { withPrefix } from "gatsby"
 import PropTypes from "prop-types"
 import { ReactSVG } from "react-svg"
 import styled, { css } from "styled-components"
@@ -157,7 +158,7 @@ const LogoFrame = props => {
         <LogoBox>
           <LogoDisplay darkCanvas={darkCanvas ? true : false} size={size}>
             <ReactSVG
-              src={`/logos/${fileName}.svg`}
+              src={withPrefix(`/logos/${fileName}.svg`)}
               afterInjection={(error, svg) => {
                 if (error) {
                   console.error(error)
@@ -168,10 +169,18 @@ const LogoFrame = props => {
             />
           </LogoDisplay>
           <LogoControl>
-            <LogoButton as="a" href={`/logos/${fileName}.png`} download>
+            <LogoButton
+              as="a"
+              href={withPrefix(`/logos/${fileName}.png`)}
+              download
+            >
               PNG
             </LogoButton>
-            <LogoButton as="a" href={`/logos/${fileName}.svg`} download>
+            <LogoButton
+              as="a"
+              href={withPrefix(`/logos/${fileName}.svg`)}
+              download
+            >
               SVG
             </LogoButton>
 
