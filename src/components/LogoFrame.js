@@ -71,6 +71,7 @@ const LogoDisplay = styled.div`
         : css`
             width: 75%;
           `}
+    height: 100%;
   }
 `
 
